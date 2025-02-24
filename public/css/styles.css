@@ -258,6 +258,93 @@ body main .contact button {
   font-size: 1rem;
   padding: 1rem;
 }
+body main .section-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+body main .section-product h1 {
+  font-size: 2.625rem;
+}
+body main .section-product h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+body main .series {
+  display: flex;
+  justify-content: center;
+}
+body main .series ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+}
+body main .series ul li {
+  font-size: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #dcdcdc;
+  width: 27rem;
+}
+body main .series .selected {
+  border-bottom: 8px solid #AA0601;
+}
+body main .series .card-product-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+body main .main-pic {
+  width: 100%;
+  display: flex;
+}
+body main .main-pic img {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .card-product-container {
+  padding: 1rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+body main .card-product-container .card-product img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .card-product-container .card-product dl {
+  display: flex;
+  justify-content: space-between;
+}
+body main .card-product-container .card-product dl dt {
+  font-size: 1.5rem;
+}
+body main .card-product-container .card-product dl .price {
+  color: #AA0601;
+  font-weight: 600;
+}
+body main .card-product-container .card-product .selection-color {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+body main .card-product-container .card-product .selection-color .color-box {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 4px;
+}
+body main .card-product-container .card-product .selection-color .color-5f3e2d {
+  background-color: #5F3E2D;
+}
+body main .card-product-container .card-product .selection-color .color-b75929 {
+  background-color: #B75929;
+}
 body footer {
   font-weight: 300;
   font-size: 1rem;
