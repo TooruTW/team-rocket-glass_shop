@@ -86,8 +86,9 @@ body{
     main{
         .box{
             width: 100%;
+            margin: 0;
             height: auto;
-            padding: 5rem;
+            padding: 4rem 5rem;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -151,9 +152,166 @@ body{
                 }
             }
         }
-        
 
-        
+        .product-designer{
+            background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true");
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                color: $color-bg-white;
+            }
+            .card-designer-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .card-designer{
+                    width: 30rem;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        border: 0px;
+                    }
+                    h2{
+                        margin-top: -6px;
+                        border: 0px;
+                        background-color: #ffffff;
+                        color: $color-theme-red;
+                        font-style: italic;
+                        font-size: 2.5rem;
+                        text-align: center;                    
+                    }
+                }
+            }
+        }
+        .custom-feedback{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .card-custom-feedback-container{
+                margin-top: 3rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 1rem;
+
+                .card-custom-feedback{
+                    border-radius: 5px;
+                    box-shadow: 0px 2px 6px #dee2e6;
+                    width: 19rem;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .text{
+                        padding: 1rem;
+                        dl{
+                            padding-bottom: 4.5rem;
+                            dt{
+                                font-weight: 800;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            form{
+
+                width: 35rem;
+                display: flex;
+                flex-direction: column;
+                label{
+                    margin-top: 1rem;
+                }
+                input{
+                    position: relative;
+                    height: 2.25rem;
+                    margin:0.5rem 0;
+                }
+                input::placeholder{
+                    position: absolute;
+                    padding: 0.5rem;
+                    top: 0;
+                    left: 0;
+                }
+                input:nth-of-type(4){
+                    text-align: start;
+                    height: 8.5rem;
+                }
+            }
+            .agreedment{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                input{
+                    margin: 0.5rem;
+                }
+            }
+            button{
+                border: none;
+                background-color: $color-theme-red;
+                width: 26rem;
+                color: $color-bg-white;
+                font-size: 1rem;
+                padding: 1rem;
+            }   
+        }
     }
+    footer{
+        font-weight: 300;
+        font-size: 1rem;
+        color: $color-bg-white;
+        width: 100%;
+        background-color: $color-theme-red;
+        padding: 2rem 5rem;
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        hr{
+            margin: 2rem 0;
+        }
+        ul{
+            gap: 2rem;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            li{
+                display: flex;
+                align-items: center;
+            }
+            img{
+                width: 3rem;
+            }
+        }
+        .contact-info{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 1rem;
+            h2{
+                font-size: 1.25rem;
+                font-weight: 400;
+            }
+
+        }
+        .anounce{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
     
 }
