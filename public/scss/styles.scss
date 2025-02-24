@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-family-chinese: "Noto Sans TC", serif;
+$font-family-english: "Roboto", serif;
+
+$color-theme-notWhite:#FBF2F2;
+$color-bg-white:#ffffff;
+$color-theme-black:#000000;
+$color-theme-darkbrown:#650300;
+$color-theme-red:#AA0601;
+$color-glass-1:#5F3E2D;
+$color-glass-2:#B75929;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+html{
+    font-size: 16px !important;
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    header{
+        width: 100%;
+        .nav-bar{
+            color: $color-bg-white;
+            display: flex;
+            justify-content: space-around;
+            background-color: $color-theme-red;
+            height: 5rem;
+            img{
+                width: 5rem;
+                object-fit: contain;
+            }
+            ul{ 
+                width: fit-content;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                gap: 4rem;
+                li{
+                    font-size: 1.25rem;
+                    width: fit-content;
+                }
+            }
+        }
+        .main-card{
+            background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true");
+            background-size: contain;
+            height: 41vw;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            .main-card-content{
+                padding-right: 16.25vw;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                text-align: end;
+                color: $color-theme-darkbrown;
+                h1{
+                    font-size: 4rem;
+                }
+                h2{
+                    font-size: 2.25rem;
+                }
+                button{
+                    color: #ffffff;
+                    border: none;
+                    background-color: $color-theme-red;
+                    font-size: 1.25rem;
+                    padding: 0.5rem 1rem;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+
+    main{
+        .box{
+            width: 100%;
+            height: auto;
+            padding: 5rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size: 3rem;
+                color: $color-theme-darkbrown;
+            }
+        }
+        .service{
+            display: flex;
+
+            background-color: $color-theme-notWhite;
+            .card-service-container{
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+                .card-service{
+                    width: 19rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    img{
+                        width: 5rem;
+                        margin: 1.5rem 0;
+                    }
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            
+        }
+
+        .product-classic{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            .card-product-classic-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                .card-product-classic{
+                    img{
+                        width: 19rem;
+                        height: 19rem;
+                        object-fit: cover;
+                    }
+                    h2{
+                        color: $color-theme-red;
+                        font-style: italic;
+                        font-size: 2.5rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        
+
+        
+    }
+    
+}

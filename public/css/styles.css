@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px !important;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header {
+  width: 100%;
+}
+body header .nav-bar {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  background-color: #AA0601;
+  height: 5rem;
+}
+body header .nav-bar img {
+  width: 5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body header .nav-bar ul {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 4rem;
+}
+body header .nav-bar ul li {
+  font-size: 1.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body header .main-card {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true");
+  background-size: contain;
+  height: 41vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+body header .main-card .main-card-content {
+  padding-right: 16.25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: end;
+  color: #650300;
+}
+body header .main-card .main-card-content h1 {
+  font-size: 4rem;
+}
+body header .main-card .main-card-content h2 {
+  font-size: 2.25rem;
+}
+body header .main-card .main-card-content button {
+  color: #ffffff;
+  border: none;
+  background-color: #AA0601;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main .box {
+  width: 100%;
+  height: auto;
+  padding: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .box h2 {
+  font-size: 3rem;
+  color: #650300;
+}
+body main .service {
+  display: flex;
+  background-color: #FBF2F2;
+}
+body main .service .card-service-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+body main .service .card-service-container .card-service {
+  width: 19rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .service .card-service-container .card-service img {
+  width: 5rem;
+  margin: 1.5rem 0;
+}
+body main .service .card-service-container .card-service h3 {
+  font-size: 1.5rem;
+}
+body main .service .card-service-container .card-service p {
+  font-size: 1rem;
+}
+body main .product-classic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+body main .product-classic .card-product-classic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+body main .product-classic .card-product-classic-container .card-product-classic img {
+  width: 19rem;
+  height: 19rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .product-classic .card-product-classic-container .card-product-classic h2 {
+  color: #AA0601;
+  font-style: italic;
+  font-size: 2.5rem;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
