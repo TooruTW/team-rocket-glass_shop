@@ -26,6 +26,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+
     header{
         width: 100%;
         .nav-bar{
@@ -51,15 +52,33 @@ body{
                 }
             }
         }
+
+    }
+
+    main{
+        width: 100vw;
+
+        .box{
+            width: 100%;
+            margin: 0;
+            height: auto;
+            padding: 4rem 5rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size: 3rem;
+                color: $color-theme-darkbrown;
+            }
+        }
         .main-card{
             background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true");
-            background-size: contain;
+            background-size: cover;
             height: 41vw;
             display: flex;
-            justify-content: end;
-            align-items: center;
+            justify-content: center;
+            align-items: end;
             .main-card-content{
-                padding-right: 16.25vw;
                 display: flex;
                 flex-direction: column;
                 align-items: end;
@@ -81,25 +100,8 @@ body{
                 }
             }
         }
-    }
-
-    main{
-        .box{
-            width: 100%;
-            margin: 0;
-            height: auto;
-            padding: 4rem 5rem;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            h2{
-                font-size: 3rem;
-                color: $color-theme-darkbrown;
-            }
-        }
         .service{
             display: flex;
-
             background-color: $color-theme-notWhite;
             .card-service-container{
                 display: flex;
@@ -219,6 +221,7 @@ body{
             }
         }
         .contact{
+            background-color: #FBF2F2;
             display: flex;
             flex-direction: column;
             justify-content: center;
