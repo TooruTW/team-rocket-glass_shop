@@ -19,16 +19,23 @@ body {
   flex-direction: column;
   align-items: center;
 }
+body a {
+  text-decoration: none;
+}
 body header {
   width: 100%;
+  background-color: #AA0601;
+}
+body header a {
+  color: #ffffff;
 }
 body header .nav-bar {
   color: #ffffff;
   display: flex;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 5rem;
+  max-width: 87.5rem;
   justify-content: space-between;
-  background-color: #AA0601;
   height: 5rem;
 }
 body header .nav-bar img {
@@ -105,11 +112,11 @@ body main .service .card-service-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5rem;
 }
 body main .service .card-service-container .card-service {
-  width: 19rem;
+  width: 19.125rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -366,7 +373,7 @@ body main .pages {
   height: 3rem;
   flex-wrap: nowrap;
   display: flex;
-  margin: 5rem;
+  margin-top: 5rem;
 }
 body main .pages div {
   margin: 0 -0.5px;
@@ -482,11 +489,13 @@ body main .store-list .card-store-container iframe {
   height: 100%;
 }
 body main .qabox-container {
-  padding: 6rem;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  margin: 0 auto;
+  padding: 6rem 5rem;
+  max-width: 87.5rem;
 }
 body main .qabox-container .qabox {
   display: flex;
@@ -525,48 +534,124 @@ body main .qabox-container .qabox .question-container .card-question p {
   font-size: 1rem;
   line-height: 1.5;
 }
+body main .blog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 auto;
+  padding: 6rem 5rem;
+  max-width: 87.5rem;
+}
+body main .blog h1 {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-left: 8px solid #9f1213;
+}
+body main .blog .card-blog-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body main .blog .card-blog-container .card-blog {
+  width: 100%;
+  display: flex;
+  margin: 2rem 0;
+}
+body main .blog .card-blog-container .card-blog img {
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .blog .card-blog-container .card-blog .text-content {
+  position: relative;
+  width: 60%;
+  min-height: 20rem;
+  padding: 0.5rem 1rem;
+}
+body main .blog .card-blog-container .card-blog .text-content h2 {
+  color: #650300;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+body main .blog .card-blog-container .card-blog .text-content h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+}
+body main .blog .card-blog-container .card-blog .text-content h3 .subtitle {
+  font-size: 1.25rem;
+}
+body main .blog .card-blog-container .card-blog .text-content h3 .date {
+  font-size: 1rem;
+  font-weight: 400;
+}
+body main .blog .card-blog-container .card-blog .text-content p {
+  color: #555555;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+body main .blog .card-blog-container .card-blog .text-content a {
+  color: #650300;
+  font-size: 2rem;
+  font-weight: 800;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+body main .blog .pages {
+  align-self: center;
+}
 body footer {
+  width: 100vw;
+  background-color: #AA0601;
+  color: #ffffff;
+}
+body footer .footer {
+  margin: 0 auto;
+  padding: 0 5rem;
+  max-width: 87.5rem;
   font-weight: 300;
   font-size: 1rem;
-  color: #ffffff;
   width: 100%;
-  background-color: #AA0601;
   padding: 2rem 5rem;
 }
-body footer nav {
+body footer .footer nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body footer hr {
+body footer .footer hr {
   margin: 2rem 0;
 }
-body footer ul {
+body footer .footer ul {
   gap: 2rem;
   list-style: none;
   display: flex;
   justify-content: center;
 }
-body footer ul li {
+body footer .footer ul li {
   display: flex;
   align-items: center;
 }
-body footer ul img {
+body footer .footer ul img {
   width: 3rem;
 }
-body footer .contact-info {
+body footer .footer .contact-info {
   display: flex;
   justify-content: start;
   align-items: center;
   font-family: "Noto Sans TC", serif;
   gap: 1rem;
 }
-body footer .contact-info h2 {
+body footer .footer .contact-info h2 {
   font-size: 1.25rem;
   font-weight: 400;
 }
-body footer .anounce {
+body footer .footer .anounce {
   display: flex;
   justify-content: space-between;
   align-items: center;
