@@ -345,6 +345,22 @@ body main .card-product-container .card-product .selection-color .color-5f3e2d {
 body main .card-product-container .card-product .selection-color .color-b75929 {
   background-color: #B75929;
 }
+body main .pages {
+  height: 3rem;
+  flex-wrap: nowrap;
+  display: flex;
+}
+body main .pages div {
+  margin: 0 -0.5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.7rem 1.05rem;
+  border: 1px solid #555555;
+}
+body main .current-page {
+  background-color: #000000;
+  color: #ffffff;
+}
 body footer {
   font-weight: 300;
   font-size: 1rem;
