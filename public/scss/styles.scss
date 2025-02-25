@@ -375,6 +375,99 @@ body{
             background-color: $color-theme-black;
             color: $color-bg-white;
         }
+        .store-list{
+            width: 100%;
+            padding: 6rem 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .title-store{
+                width: fit-content;
+                height: fit-content;
+                padding:  0.5rem 1rem;
+                border-left: 8px solid #9f1213;
+            }
+            .select-area{
+                display: flex;
+                gap: 1rem;
+                h2{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+                select{
+                    border: 1px solid #c4d4da;
+                    border-radius: none;
+                    font-size: 1.125rem;
+                    color: #495057;
+                    opacity: 0.75;
+                    width: 19rem;
+                    height: 2rem;
+                }
+            }
+            .card-store-container{
+                display: grid;
+                gap:1.5rem;
+                grid-template-columns: repeat(3,1fr);
+                .card-store{
+                    width: 26rem;
+                    border: 1px solid #00000020;
+                    color: #212529;
+                    img{
+                        width: 100%;
+                        object-fit: contain;                    
+                    }
+                    h2{
+                        border-bottom: 2px solid #00000020;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        padding: 0.5rem 1.5rem;
+                    }
+                    ul{
+                        font-size: 1.25rem;
+                        font-weight: 400;
+                        padding: 0.5rem 1.5rem;
+                        list-style: none;
+                        li{
+                            margin: 0.5rem 0;
+                            display: flex;
+                            gap: 0.5rem;
+                            span{
+                                line-height: 1.5;
+                                height: fit-content;
+                            }
+                        }
+                    }
+                    button{
+                        color: $color-bg-white;
+                        background-color: $color-theme-black;
+                        font-weight: 400;
+                        font-size: 1.125rem;
+                        padding: 1rem 0;
+                        width: 100%;
+                        border: none;
+                    }
+                }
+                .detail{
+                    width: 32.875rem !important;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        span{
+                            height: fit-content;
+                        }
+                    }
+                }
+                iframe{
+                    width: 46.625rem;
+                    height: 100%;
+                }
+            }
+        }
+
+
+
     }
 
     footer{
@@ -410,6 +503,7 @@ body{
             display: flex;
             justify-content: start;
             align-items: center;
+            font-family: $font-family-chinese;
             gap: 1rem;
             h2{
                 font-size: 1.25rem;
