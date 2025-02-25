@@ -307,6 +307,7 @@ body main .main-pic img {
      object-fit: cover;
 }
 body main .card-product-container {
+  margin-top: 1.5rem;
   padding: 1rem 5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -345,10 +346,14 @@ body main .card-product-container .card-product .selection-color .color-5f3e2d {
 body main .card-product-container .card-product .selection-color .color-b75929 {
   background-color: #B75929;
 }
+body main .sunglasses {
+  grid-template-columns: repeat(3, 1fr);
+}
 body main .pages {
   height: 3rem;
   flex-wrap: nowrap;
   display: flex;
+  margin: 5rem;
 }
 body main .pages div {
   margin: 0 -0.5px;

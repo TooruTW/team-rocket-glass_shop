@@ -315,6 +315,7 @@ body{
             }
         }
         .card-product-container{
+            margin-top: 1.5rem;
             padding: 1rem 5rem;
             display:  grid;
             grid-template-columns: repeat(4,1fr);
@@ -355,11 +356,14 @@ body{
                 }
             }
         }
+        .sunglasses{
+            grid-template-columns: repeat(3,1fr);
+        }
         .pages{
             height: 3rem;
             flex-wrap: nowrap;
             display: flex;
-
+            margin: 5rem;
             div{
                 margin: 0 -0.5px;
                 width: fit-content;
