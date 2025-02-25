@@ -7,6 +7,10 @@
 
 html {
   font-size: 16px !important;
+  font-family: "Noto Sans TC", serif, "Roboto", serif, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
@@ -21,7 +25,9 @@ body header {
 body header .nav-bar {
   color: #ffffff;
   display: flex;
-  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0 1rem;
+  justify-content: space-between;
   background-color: #AA0601;
   height: 5rem;
 }
@@ -49,9 +55,10 @@ body main {
 }
 body main .box {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   height: auto;
   padding: 4rem 5rem;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -91,12 +98,14 @@ body main .main-card .main-card-content button {
   width: fit-content;
 }
 body main .service {
-  display: flex;
+  width: 100%;
   background-color: #FBF2F2;
 }
 body main .service .card-service-container {
+  width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 body main .service .card-service-container .card-service {
@@ -126,6 +135,7 @@ body main .product-classic .card-product-classic-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 body main .product-classic .card-product-classic-container .card-product-classic img {
@@ -142,7 +152,7 @@ body main .product-classic .card-product-classic-container .card-product-classic
 }
 body main .product-designer {
   background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true");
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,7 +167,7 @@ body main .product-designer .card-designer-container {
   align-items: center;
 }
 body main .product-designer .card-designer-container .card-designer {
-  width: 30rem;
+  max-width: 30rem;
 }
 body main .product-designer .card-designer-container .card-designer img {
   width: 100%;
@@ -182,8 +192,9 @@ body main .custom-feedback {
 }
 body main .custom-feedback .card-custom-feedback-container {
   margin-top: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 body main .custom-feedback .card-custom-feedback-container .card-custom-feedback {
@@ -222,6 +233,8 @@ body main .contact form label {
   margin-top: 1rem;
 }
 body main .contact form input {
+  border-radius: 0;
+  border: 1px solid #000000;
   position: relative;
   height: 2.25rem;
   margin: 0.5rem 0;
@@ -397,6 +410,14 @@ body main .store-list .select-area select {
   opacity: 0.75;
   width: 19rem;
   height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("https://www.svgrepo.com/show/345449/arrow-drop-down.svg");
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: right 0 top 50%;
 }
 body main .store-list .card-store-container {
   display: grid;
@@ -459,6 +480,50 @@ body main .store-list .card-store-container .detail li span {
 body main .store-list .card-store-container iframe {
   width: 46.625rem;
   height: 100%;
+}
+body main .qabox-container {
+  padding: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .qabox-container .qabox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  min-width: 53.5rem;
+}
+body main .qabox-container .qabox h1 {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-left: 8px solid #9f1213;
+}
+body main .qabox-container .qabox h2 {
+  font-size: 1.5rem;
+}
+body main .qabox-container .qabox .question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+body main .qabox-container .qabox .question-container .card-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: pre-wrap;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body main .qabox-container .qabox .question-container .card-question h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+body main .qabox-container .qabox .question-container .card-question p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 body footer {
   font-weight: 300;
