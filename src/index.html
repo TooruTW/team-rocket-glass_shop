@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,9 @@
     <header>
         <nav class="nav-bar">
 
-            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true" alt="icon_glass">
+            <a href="./index.html">
+                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true" alt="icon_glass">
+            </a>
 
             <ul>
                 <li><a href="./product-series-optical.html">系列鏡框</a></li>
@@ -27,7 +29,7 @@
             <div class="main-card-content">
                 <h2>Promise-Desert 2020 早春系列</h2>
                 <h1>看得清，才能看得遠</h1>
-                <button>立即購買</button>
+                <a href="./product-series-optical.html"><button id="purchase">立即購買</button></a>
             </div>
         </div>
         <div class="box service">
@@ -54,7 +56,6 @@
 
                 <div class="card-service">                                        
                     <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-sectioin2-4.png?raw=true" alt="icon_vouiceMail">
-
                     <h3>關於鏡片</h3>
                     <p>使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
                 </div>
@@ -82,11 +83,17 @@
             <h2>聯名設計鏡框</h2>
             <div class="card-designer-container">
                 <div class="card-designer">
-                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1.png?raw=true" alt="design-double-a-plus">
+                    <picture>
+                        <source srcset="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1-sm.png?raw=true" media="(max-width: 600px)" />
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1.png?raw=true" alt="design-double-a-plus">
+                    </picture>
                     <h2>DOUBLE A+</h2>
                 </div>
                 <div class="card-designer">
-                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2.png?raw=true" alt="designer-youth">
+                    <picture>
+                        <source srcset="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true" media="(max-width: 600px)" />
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2.png?raw=true" alt="designer-youth">
+                    </picture>
                     <h2>YOUTH</h2>
                 </div>
             </div>
@@ -148,9 +155,9 @@
                     <input type="text" id="mail" name="mail" placeholder="example@email.com">
                     <label for="feedback">意見反應</label>
                     <input type="text" id="feedback" name="feedback" placeholder="請輸入您的意見">
-                    <div class="agreedment">
-                        <input type="checkbox" name="agreedment" id="agreedment">
-                        <p >我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</p>
+                    <div class="agreed">
+                        <input type="checkbox" name="agreed" id="agreed">
+                        <label for="agreed">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
                     </div>
                     
                 </form>
@@ -161,16 +168,16 @@
         <div class="footer">
         <nav>
             <ul>
-                <li>首頁</li>
-                <li>系列鏡框</li>
-                <li>門市據點</li>
-                <li>部落格</li>
-                <li>常見問題</li>
+                <li><a href="./index.html">首頁</a></li>
+                <li><a href="./product-series-optical.html">系列鏡框</a></li>
+                <li><a href="./store-list.html">門市據點</a></li>
+                <li><a href="./blog.html">部落格</a></li>
+                <li><a href="./q&a.html">常見問題</a></li>
             </ul>
             <ul>
-                <li><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic-social-fb.png?raw=true" alt="facebook"></li>
-                <li><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic_social_ig.png?raw=true" alt="ig"></li>
-                <li><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic_social_line.png?raw=true" alt="line"></li>
+                <li><a href="https://www.facebook.com/"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic-social-fb.png?raw=true" alt="facebook"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic_social_ig.png?raw=true" alt="ig"></a></li>
+                <li><a href="https://www.line.me/tw/"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic_social_line.png?raw=true" alt="line"></a></li>
             </ul>
         </nav>
         <div class="contact-info">
@@ -179,10 +186,10 @@
         </div>
         <div class="contact-info">
             <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#FFFFFF"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-            <h2>glasses@business.co</h2>
+            <a href="mailto:glasses@business.com"><h2>glasses@business.com</h2></a>
         </div>
         <hr/>
-        <div class="anounce">
+        <div class="announce">
             <span>Copyright © 2020 Glasses.All rights reserved.</span>
             <ul>
                 <li>隱私權政策</li>
