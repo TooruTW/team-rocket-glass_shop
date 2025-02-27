@@ -63,6 +63,7 @@ body{
         .icon:hover{
             transform: rotate(360deg);
         }
+        
         .nav-bar{
             color: $color-bg-white;
             display: flex;
@@ -456,6 +457,7 @@ body{
                 .card-custom-feedback-container{
                     flex-wrap: wrap;
                     .card-custom-feedback{
+                        animation: none;
                         width: 48%;
                     }
                 }

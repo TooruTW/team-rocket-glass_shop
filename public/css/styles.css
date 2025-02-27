@@ -453,6 +453,7 @@ body main .custom-feedback .card-custom-feedback-container .card-custom-feedback
     flex-wrap: wrap;
   }
   body main .custom-feedback .card-custom-feedback-container .card-custom-feedback {
+    animation: none;
     width: 48%;
   }
 }
