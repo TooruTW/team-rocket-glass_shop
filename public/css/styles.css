@@ -30,6 +30,12 @@ body header {
 body header a {
   color: #ffffff;
 }
+body header .icon {
+  transition: all 0.5s ease;
+}
+body header .icon:hover {
+  transform: rotate(360deg);
+}
 body header .nav-bar {
   color: #ffffff;
   display: flex;
@@ -209,8 +215,12 @@ body main .main-card .main-card-content button {
   cursor: pointer;
   transition: all 0.1s ease;
 }
-body main .main-card .main-card-content button:active {
+body main .main-card .main-card-content button:hover {
   transform: translateX(-3px) translateY(-3px) scale(1.1);
+  box-shadow: 5px 5px 5px #AA0601;
+}
+body main .main-card .main-card-content button:active {
+  transform: translateX(3px) translateY(3px) scale(1.1);
   box-shadow: 5px 5px 5px #AA0601;
 }
 @media (max-width: 960px) {
@@ -245,6 +255,9 @@ body main .service .card-service-container {
   gap: 1.5rem;
 }
 body main .service .card-service-container .card-service {
+  animation: appear-right linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
   width: 20.5rem;
   display: flex;
   flex-direction: column;
@@ -315,6 +328,9 @@ body main .product-classic .card-product-classic-container {
   flex-wrap: wrap;
 }
 body main .product-classic .card-product-classic-container .card-product-classic {
+  animation: appear-left linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
   width: 32%;
 }
 body main .product-classic .card-product-classic-container .card-product-classic img {
@@ -365,6 +381,9 @@ body main .product-designer .card-designer-container {
   margin-top: 2rem;
 }
 body main .product-designer .card-designer-container .card-designer {
+  animation: appear-scale linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
   max-width: 100%;
 }
 body main .product-designer .card-designer-container .card-designer img {
@@ -405,6 +424,9 @@ body main .custom-feedback .card-custom-feedback-container {
   gap: 1.5rem;
 }
 body main .custom-feedback .card-custom-feedback-container .card-custom-feedback {
+  animation: appear-scale linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
   border-radius: 5px;
   box-shadow: 0px 2px 6px #dee2e6;
   width: 25%;
@@ -532,7 +554,7 @@ body main .contact button {
   padding: 1rem;
   transition: all 0.1s ease;
 }
-body main .contact button:active {
+body main .contact button:hover {
   transform: translateY(-3px) scale(1.1);
   box-shadow: 0px 5px 5px #AA0601;
 }
@@ -583,6 +605,9 @@ body main .series {
 body main .series a {
   width: 33.3333333333%;
   color: #000000;
+}
+body main .series a:hover {
+  background-color: rgb(189, 186, 186);
 }
 body main .series ul {
   width: 100%;
@@ -1480,6 +1505,10 @@ body footer .footer ul {
 body footer .footer ul li {
   width: -moz-fit-content;
   width: fit-content;
+  transition: all 0.2s ease;
+}
+body footer .footer ul li:hover {
+  transform: scale(1.25);
 }
 body footer .footer ul img {
   width: 3rem;
@@ -1503,6 +1532,9 @@ body footer .footer .contact-info {
 body footer .footer .contact-info h2 {
   font-size: 1.25rem;
   font-weight: 400;
+}
+body footer .footer .contact-info svg:hover {
+  animation: shake 1s linear;
 }
 body footer .footer .announce {
   display: flex;
@@ -1569,5 +1601,57 @@ body footer .footer .announce {
     flex-direction: column;
     align-items: start;
     gap: 0.5rem;
+  }
+}
+
+@keyframes appear-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes appear-left {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes appear-scale {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(30deg);
+  }
+  20% {
+    transform: rotate(-30deg);
+  }
+  40% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  80% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }/*# sourceMappingURL=styles.css.map */

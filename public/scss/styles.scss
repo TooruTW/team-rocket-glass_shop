@@ -11,6 +11,24 @@ $color-theme-red:#AA0601;
 $color-glass-1:#5F3E2D;
 $color-glass-2:#B75929;
 
+@mixin entry-right{
+    animation: appear-right linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+
+
+@mixin entry-left{
+    animation: appear-left linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+
+@mixin appear-scale{
+    animation: appear-scale linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
 
 *{
     margin: 0;
@@ -38,6 +56,12 @@ body{
         background-color: $color-theme-red;
         a{
             color: $color-bg-white;
+        }
+        .icon{
+            transition: all 0.5s ease;
+        }
+        .icon:hover{
+            transform: rotate(360deg);
         }
         .nav-bar{
             color: $color-bg-white;
@@ -210,8 +234,12 @@ body{
                     cursor: pointer;
                     transition: all 0.1s ease;
                 }
-                button:active{
+                button:hover{
                     transform: translateX(-3px) translateY(-3px) scale(1.1);
+                    box-shadow: 5px 5px 5px $color-theme-red;
+                }
+                button:active{
+                    transform: translateX(3px) translateY(3px) scale(1.1);
                     box-shadow: 5px 5px 5px $color-theme-red;
                 }
             }
@@ -244,6 +272,7 @@ body{
                 justify-content: space-between;
                 gap: 1.5rem;
                 .card-service{
+                    @include entry-right();
                     width: 20.5rem;
                     display: flex;
                     flex-direction: column;
@@ -311,6 +340,7 @@ body{
                 align-items: center;
                 flex-wrap: wrap;
                 .card-product-classic{
+                    @include entry-left();
                     width: 32%;
                     img{
                         width: 100%;
@@ -359,6 +389,7 @@ body{
                 margin-top: 2rem;
 
                 .card-designer{
+                    @include appear-scale();
                     max-width: 100%;
                     img{
                         width: 100%;
@@ -398,6 +429,7 @@ body{
                 justify-content: center;
                 gap: 1.5rem;
                 .card-custom-feedback{
+                    @include appear-scale();
                     border-radius: 5px;
                     box-shadow: 0px 2px 6px #dee2e6;
                     width: 25%;
@@ -522,7 +554,7 @@ body{
                 padding: 1rem;
                 transition: all 0.1s ease;
             }   
-            button:active{
+            button:hover{
                 transform: translateY(-3px) scale(1.1);
                 box-shadow: 0px 5px 5px $color-theme-red;
             }
@@ -574,6 +606,9 @@ body{
             a{  
                 width: (100% / 3);
                 color: $color-theme-black;
+            }
+            a:hover{
+                background-color: rgb(189, 186, 186);
             }
             ul{
                 width: 100%;
@@ -1460,6 +1495,10 @@ body{
                 flex-wrap: wrap;
                 li{
                     width: fit-content;
+                    transition: all 0.2s ease;
+                }
+                li:hover{
+                    transform: scale(1.25);
                 }
                 img{
                     width: 3rem;
@@ -1483,6 +1522,10 @@ body{
                 h2{
                     font-size: 1.25rem;
                     font-weight: 400;
+                }
+
+                svg:hover{
+                    animation: shake 1s linear; 
                 }
             }
             .announce{
@@ -1554,7 +1597,59 @@ body{
             }
         }
     }
+}
 
+@keyframes appear-right{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 
-    
+@keyframes appear-left{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes appear-scale{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        width: 100%;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shake{
+    0%{
+        transform: rotate(30deg);
+    }
+    20%{
+        transform: rotate(-30deg);
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+    }
+    80%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
