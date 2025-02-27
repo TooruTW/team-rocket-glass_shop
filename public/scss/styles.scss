@@ -81,8 +81,14 @@ body{
                 }
             }
         }
+        @media (max-width:960px) {
+            .nav-bar{
+                padding:0 2rem;
+            }
+        }
         @media (max-width:700px){
             .nav-bar{
+                width: 100%;
                 padding:0;
                 flex-direction: column;
                 align-items: start;
@@ -123,6 +129,30 @@ body{
                 align-items: center;
                 gap: 4rem;
                 }
+        }
+        @media (max-width:960px) {
+            .nav-blog{
+                padding:0.5rem 2rem;
+            }
+        }
+        @media (max-width:600px) {
+            .nav-blog{
+                margin: 0 auto;
+                padding:0.5rem 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                svg{
+                    display: none;
+                }
+                ul{
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    }
+            }
         }
     }
 
@@ -737,7 +767,7 @@ body{
                 flex-wrap: nowrap;
                 display: flex;
                 margin-top: 5rem;
-                margin: 1rem;
+                margin: 1rem 0;
                 div{
                     display: flex;
                     align-items: center;
@@ -1043,6 +1073,7 @@ body{
                     width: 100%;
                     display: flex;
                     margin: 2rem 0;
+                    min-height: 360px;
                     img{
                         width: 40%;
                         object-fit: cover;
@@ -1050,7 +1081,6 @@ body{
                     .text-content{
                         position: relative;
                         width: 60%;
-                        min-height: 20rem;
                         padding: 0.5rem 1rem;
                         h2{
                             color: #650300;
@@ -1090,13 +1120,124 @@ body{
             .pages{
                 align-self: center;
             }
+            @media (max-width:960px) {
+                margin: 0 auto;
+                padding:6rem 2rem;
+                .card-blog-container{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .card-blog{
+                        min-height: 0;
+                        display: flex;
+                        gap: 1.5rem;
+                        height: 208px;
+                        position: relative;
+                        img{
+                            width: 50%;
+                            object-fit: cover;
+                        }
+                        .text-content{
+                            height: 100%;
+                            width:  50%;
+                            padding: 0;
+                            h2{
+                                color: #650300;
+                                font-size: 1.5rem;
+                                font-weight: 400;
+                            }
+                            h3{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                color: $color-theme-black;
+                                .subtitle{
+                                    font-size: 1rem;
+                                }
+                                .date{
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                }
+                            }
+                            p{
+                                color: #555555;
+                                line-height: 1.5;
+                                font-size: 1rem;
+                                font-weight: 300;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 6;
+                                line-clamp: 6;
+                                overflow: hidden;
+                            }
+                            a{  
+                                position: absolute;
+                                right: 0;
+                                bottom: -16px;
+                                color: #555555;
+                                font-size: 1rem;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width:600px) {
+                margin: 0 auto;
+                padding:6rem 1rem;
+                .card-blog-container{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .card-blog{
+                        min-height: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                        height: auto;
+                        position: relative;
+                        margin: 0.75rem 0;
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        .text-content{
+                            width:  100%;
+                            padding: 0;
+                            h2{
+                                color: #650300;
+                                font-size: 1.5rem;
+                                font-weight: 400;
+                            }
+                            h3{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                color: $color-theme-black;
+                                .subtitle{
+                                    font-size: 1rem;
+                                }
+                                .date{
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                }
+                            }
+                            p{  
+                                display: none;
+                            }
+                            a{  
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
         .blog-detail{
-
             margin: 0 auto;
-            padding:0.5rem 5rem;
+            padding:6rem 5rem;
             max-width: 87.5rem;
-            .title-conatiner{
+            .title-container{
                 h3{
                     font-size: 1rem;
                     font-weight: 400;
@@ -1122,25 +1263,23 @@ body{
                     }
                 }
             }
-
             .col-container{
                 display: flex;
                 gap: 1.5rem;
                 .col-left{
-                    width: 60%;
+                    width: 80%;
                     p{
                         white-space: pre-wrap;
                         word-break: break-word;
                         line-height: 1.5;
                         margin: 0rem 0 1rem 0;
                         color: #555555;
+                        opacity: 0.6;
                     }
                     img{
                         width: 100%;
                         object-fit: cover;
                     }
-    
-    
                     h1{
                         font-size: 3rem;
                         font-weight: 300;
@@ -1182,6 +1321,7 @@ body{
                     width: 25%;
                     color: $color-theme-red;
                     .title{
+                        padding-left: 8px;
                         display: flex;
                         align-items: center;
                         gap: 1rem;
@@ -1196,6 +1336,91 @@ body{
                     }
                 }
             }
+            @media (max-width:960px) {
+                margin: 0 auto;
+                padding:6rem 2rem;
+                max-width: 87.5rem;
+                .col-container{
+                    display: flex;
+                    gap: 1.5rem;
+                    .col-left{
+                        p{
+                            white-space: pre-wrap;
+                            word-break: break-word;
+                            line-height: 1.5;
+                            color: #555555;
+                            margin-top: 1rem;
+                            margin-bottom: 1.5rem;
+                        }
+                        h2{
+                            font-family: $font-family-english;
+                            font-weight: 400;
+                            margin-bottom: 1.5rem;
+                        }
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        h1{
+                            font-size: 3rem;
+                            font-weight: 400;
+                        }
+                        .inner-footer{
+                            display: none;
+                        }
+                    }
+                    .col-right{
+                        .title{
+                            gap: 0.25rem;
+                            svg{
+                                width: 1.5rem;
+                            }
+                            h2{
+                                font-size: 1rem;
+                            }
+                        }
+                        .tags{
+                            a{
+                                font-weight: 600;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width:600px) {
+                margin: 0 auto;
+                padding:1rem 1rem;
+                .col-container{
+                    display: flex;
+                    .col-left{
+                        width: 100%;
+                        p{
+                            white-space: pre-wrap;
+                            word-break: break-word;
+                            line-height: 1.5;
+                            color: #555555;
+                            margin-top: 0.5rem;
+                            margin-bottom: 1rem;
+                        }
+                        h2{
+                            font-family: $font-family-english;
+                            font-weight: 400;
+                            margin-bottom: 1rem;
+                        }
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        h1{
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .col-right{
+                        display: none;
+                    }
+                }
+            }
 
 
         }
@@ -1206,7 +1431,6 @@ body{
         width: 100vw;
         background-color: $color-theme-red;
         color: $color-bg-white;
-
         .footer{
             margin: 0 auto;
             padding:0 5rem;
@@ -1247,11 +1471,9 @@ body{
             nav ul:nth-child(2){
                 gap: 0.5rem;
             }
-
             hr{
                 margin: 2rem 0;
             }
-            
             .contact-info{
                 display: flex;
                 justify-content: start;
@@ -1262,7 +1484,6 @@ body{
                     font-size: 1.25rem;
                     font-weight: 400;
                 }
-    
             }
             .announce{
                 display: flex;
@@ -1272,10 +1493,9 @@ body{
         }
         @media (max-width:600px) {
             .footer{
-
                 height: fit-content;
                 margin: 0;
-                padding: 1rem 0.5rem;
+                padding: 1rem 1rem;
                 width: 100%;
                 position: relative;
                 nav{
