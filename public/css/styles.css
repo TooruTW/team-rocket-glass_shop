@@ -759,10 +759,15 @@ body main .current-page {
 }
 body main .store-list {
   width: 100%;
-  padding: 6rem 5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: 6rem auto;
+  padding: 0 5rem;
+  max-width: 87.5rem;
+}
+body main .store-list a {
+  color: #ffffff;
 }
 body main .store-list .title-store {
   width: -moz-fit-content;
@@ -809,8 +814,8 @@ body main .store-list .card-store-container .card-store {
 }
 body main .store-list .card-store-container .card-store img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body main .store-list .card-store-container .card-store h2 {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1254901961);
@@ -853,40 +858,62 @@ body main .store-list .card-store-container .card-store button {
   width: 100%;
   border: none;
 }
-body main .store-list .card-store-container .detail {
-  width: 32.875rem !important;
+body main .store-list .detail-container {
+  grid-template-columns: 1fr 1.418fr;
 }
-body main .store-list .card-store-container .detail li {
+body main .store-list .detail-container .detail li {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
-body main .store-list .card-store-container .detail li span {
+body main .store-list .detail-container .detail li span {
   height: -moz-fit-content;
   height: fit-content;
 }
-body main .store-list .card-store-container iframe {
-  width: 46.625rem;
+body main .store-list .detail-container iframe {
+  width: 100%;
   height: 100%;
 }
 @media (max-width: 960px) {
   body main .store-list {
-    padding: 6rem 2rem;
+    margin: 0 auto;
+    padding: 5rem 2rem;
   }
   body main .store-list .card-store-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  body main .store-list .card-store-container .detail {
+  body main .store-list .detail-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  body main .store-list .detail-container .detail {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  body main .store-list .detail-container .detail img {
+    width: 50%;
+  }
+  body main .store-list .detail-container .detail .detail-text {
+    width: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1254901961);
+  }
+  body main .store-list .detail-container .detail li {
+    display: flex;
+    align-items: center;
+  }
+  body main .store-list .detail-container .detail li span {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body main .store-list .detail-container iframe {
+    grid-row: span 2;
     width: 100%;
   }
-  body main .store-list .card-store-container iframe {
-    width: 46.625rem;
-    height: 100%;
-  }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body main .store-list {
-    padding: 6rem 1rem;
+    padding: 3rem 1rem;
   }
   body main .store-list .title-store {
     padding: 0 1rem;
@@ -911,21 +938,33 @@ body main .store-list .card-store-container iframe {
   body main .store-list .card-store-container .card-store {
     font-weight: 300;
   }
-  body main .store-list .card-store-container .detail {
-    width: 32.875rem !important;
+  body main .store-list .detail-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr;
   }
-  body main .store-list .card-store-container .detail li {
+  body main .store-list .detail-container .detail {
+    border: 1px solid rgba(0, 0, 0, 0.1254901961);
+    display: block;
+  }
+  body main .store-list .detail-container .detail img {
+    width: 100%;
+  }
+  body main .store-list .detail-container .detail .detail-text {
+    grid-row: span 2;
+    width: 100%;
+    border: none;
+  }
+  body main .store-list .detail-container .detail li {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
   }
-  body main .store-list .card-store-container .detail li span {
+  body main .store-list .detail-container .detail li span {
     height: -moz-fit-content;
     height: fit-content;
   }
-  body main .store-list .card-store-container iframe {
-    width: 46.625rem;
-    height: 100%;
+  body main .store-list .detail-container iframe {
+    grid-row: span 1;
+    width: 100%;
   }
 }
 body main .qabox-container {
